@@ -105,7 +105,7 @@ func (psql *Postgres) connect() error {
 }
 
 func (psql *Postgres) checkConnection() error {
-	fmt.Printf("Connection: %+v\n", psql.conn)
+	//fmt.Printf("Connection: %+v\n", psql.conn)
 	if psql.conn == nil {
 		return psql.connect()
 	}
