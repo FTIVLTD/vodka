@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"log"
 
-	"vodka/builders"
+	"github.com/FTIVLTD/vodka/builders"
 
 	_ "github.com/lib/pq" // PostgreSQL driver
 )

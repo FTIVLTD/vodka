@@ -3,13 +3,13 @@ package main
 import (
 	"log"
 
-	"vodka/example/modules/items"
+	"github.com/FTIVLTD/vodka/example/modules/items"
 
-	"vodka"
-	"vodka/adapters"
-	"vodka/example/controllers"
-	"vodka/example/modules/orders"
-	"vodka/example/modules/users"
+	"github.com/FTIVLTD/vodka"
+	"github.com/FTIVLTD/vodka/adapters"
+	"github.com/FTIVLTD/vodka/example/controllers"
+	"github.com/FTIVLTD/vodka/example/modules/orders"
+	"github.com/FTIVLTD/vodka/example/modules/users"
 )
 
 type infrastructure struct {

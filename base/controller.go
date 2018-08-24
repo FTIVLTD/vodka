@@ -1,7 +1,7 @@
 package base
 
 import (
-	"vodka"
+	"github.com/FTIVLTD/vodka"
 )
 
 /*

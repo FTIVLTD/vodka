@@ -8,9 +8,9 @@ import (
 	"reflect"
 	"strconv"
 
-	"vodka"
-	"vodka/adapters"
-	"vodka/builders"
+	"github.com/FTIVLTD/vodka"
+	"github.com/FTIVLTD/vodka/adapters"
+	"github.com/FTIVLTD/vodka/builders"
 
 	lib "github.com/niklucky/go-lib"
 	uuid "github.com/nu7hatch/gouuid"

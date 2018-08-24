@@ -6,7 +6,7 @@ import (
 	"strconv"
 	"time"
 
-	"vodka/builders"
+	"github.com/FTIVLTD/vodka/builders"
 )
 
 func populateStructByMap(rv reflect.Value, data map[string]interface{}) interface{} {

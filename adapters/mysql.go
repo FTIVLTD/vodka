@@ -6,7 +6,7 @@ import (
 	"log"
 	"strings"
 
-	"vodka/builders"
+	"github.com/FTIVLTD/vodka/builders"
 
 	_ "github.com/go-sql-driver/mysql" // MySQL driver
 )

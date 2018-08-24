@@ -1,8 +1,8 @@
 package controllers
 
 import (
-	"vodka/base"
-	"vodka/example/modules/orders"
+	"github.com/FTIVLTD/vodka/base"
+	"github.com/FTIVLTD/vodka/example/modules/orders"
 )
 
 // Order - users controller struct

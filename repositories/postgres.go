@@ -9,10 +9,10 @@ import (
 	"reflect"
 	"strconv"
 
-	"vodka/builders"
+	"github.com/FTIVLTD/vodka/builders"
 
-	"vodka"
-	"vodka/adapters"
+	"github.com/FTIVLTD/vodka"
+	"github.com/FTIVLTD/vodka/adapters"
 
 	uuid "github.com/nu7hatch/gouuid"
 

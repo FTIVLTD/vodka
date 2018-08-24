@@ -4,7 +4,7 @@ import (
 	"database/sql"
 	"time"
 
-	"vodka/builders"
+	"github.com/FTIVLTD/vodka/builders"
 )
 
 /*

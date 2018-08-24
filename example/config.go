@@ -3,8 +3,8 @@ package main
 import (
 	"encoding/json"
 
-	"vodka"
-	"vodka/adapters"
+	"github.com/FTIVLTD/vodka"
+	"github.com/FTIVLTD/vodka/adapters"
 
 	lib "github.com/niklucky/go-lib"
 )

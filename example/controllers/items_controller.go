@@ -1,8 +1,8 @@
 package controllers
 
 import (
-	"vodka/base"
-	"vodka/example/modules/items"
+	"github.com/FTIVLTD/vodka/base"
+	"github.com/FTIVLTD/vodka/example/modules/items"
 )
 
 // Items - Items controller struct
