@@ -1,8 +1,8 @@
 package controllers
 
 import (
-	"github.com/syndicatedb/vodka/base"
-	"github.com/syndicatedb/vodka/example/modules/items"
+	"vodka/base"
+	"vodka/example/modules/items"
 )
 
 // Items - Items controller struct

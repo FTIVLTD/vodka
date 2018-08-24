@@ -3,9 +3,9 @@ package users
 import (
 	"time"
 
-	"github.com/syndicatedb/vodka/adapters"
-	"github.com/syndicatedb/vodka/base"
-	"github.com/syndicatedb/vodka/repositories"
+	"vodka/adapters"
+	"vodka/base"
+	"vodka/repositories"
 )
 
 // API — external API for module

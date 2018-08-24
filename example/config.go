@@ -3,9 +3,10 @@ package main
 import (
 	"encoding/json"
 
+	"vodka"
+	"vodka/adapters"
+
 	lib "github.com/niklucky/go-lib"
-	"github.com/syndicatedb/vodka"
-	"github.com/syndicatedb/vodka/adapters"
 )
 
 /*

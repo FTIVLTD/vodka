@@ -1,9 +1,9 @@
 package orders
 
 import (
-	"github.com/syndicatedb/vodka/adapters"
-	"github.com/syndicatedb/vodka/base"
-	"github.com/syndicatedb/vodka/repositories"
+	"vodka/adapters"
+	"vodka/base"
+	"vodka/repositories"
 )
 
 const source = "orders"
