@@ -4,7 +4,6 @@ import (
 	"database/sql"
 	"errors"
 	"fmt"
-	"log"
 	"os"
 	"reflect"
 	"strconv"
@@ -113,15 +112,13 @@ func (ds *Postgres) Create(data interface{}) (interface{}, error) {
 	builder := ds.adapter.Builder()
 	builder.Insert(ds.source).Values(data)
 	SQL := builder.Build()
-
-	if ds.debug {
-		fmt.Println("Create SQL: ", SQL)
-	}
+	//if ds.debug {
+	fmt.Println("SQL Query: ", SQL)
+	//}
 	result, err := ds.adapter.Exec(SQL)
 	if err != nil {
 		return nil, err
 	}
-	log.Printf("Result: %+v\n", result)
 	var id int64
 	// We have auto increment id that is returned
 	if id, err = result.LastInsertId(); err == nil {
@@ -169,10 +166,9 @@ func (ds *Postgres) Save(data interface{}, params ParamsMap) (interface{}, error
 		qb.OnConflictAction(mod.onConflictAction)
 		SQL = qb.Build()
 	}
-
-	if ds.debug {
-		fmt.Println("Save SQL: ", SQL)
-	}
+	//if ds.debug {
+	fmt.Println("SQL Query: ", SQL)
+	//}
 
 	// Just returning result back: created/updated row
 	// or [] if on conflict action was set to NOTHING
@@ -220,10 +216,9 @@ Delete - deleteing from storage by query
 func (ds Postgres) Delete(q QueryMap) (interface{}, error) {
 	builder := ds.adapter.Builder()
 	SQL := builder.Delete().From(ds.source).Where(q).Build()
-	if ds.debug {
-		fmt.Println("Delete SQL: ", SQL)
-	}
-
+	//if ds.debug {
+	fmt.Println("SQL Query: ", SQL)
+	//}
 	rows, err := ds.adapter.Exec(SQL)
 	if err != nil {
 		return nil, err
@@ -243,9 +238,9 @@ func (ds *Postgres) DeleteByID(id interface{}) (interface{}, error) {
 		q["id"] = id
 	}
 	SQL := builder.Delete().From(ds.source).Where(q).Build()
-	if ds.debug {
-		fmt.Println("DeleteByID SQL: ", SQL)
-	}
+	//if ds.debug {
+	fmt.Println("SQL Query: ", SQL)
+	//}
 	result, err := ds.adapter.Exec(SQL)
 	if err != nil {
 		return nil, err
@@ -259,9 +254,9 @@ Update - updating item in storage by query and payload
 func (ds *Postgres) Update(q QueryMap, payload map[string]interface{}) (interface{}, error) {
 	builder := ds.adapter.Builder()
 	SQL := builder.Update(ds.source).Set(payload).Where(q).Limit(1, 0).Build()
-	if ds.debug {
-		fmt.Println("Update SQL: ", SQL)
-	}
+	//if ds.debug {
+	fmt.Println("SQL Query: ", SQL)
+	//}
 	_, err := ds.adapter.Exec(SQL)
 	if err != nil {
 		return nil, err
@@ -365,9 +360,9 @@ func (ds *Postgres) fetch(query QueryMap, params interface{}) ([]interface{}, er
 	}
 
 	SQL := qb.Build()
-	if ds.debug {
-		fmt.Println("Fetch SQL: ", SQL)
-	}
+	//if ds.debug {
+	fmt.Println("SQL Query: ", SQL)
+	//}
 	rows, err := ds.adapter.Query(SQL)
 	if err != nil {
 		fmt.Println("Error: ", err)

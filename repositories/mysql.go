@@ -4,7 +4,6 @@ import (
 	"database/sql"
 	"errors"
 	"fmt"
-	"log"
 	"reflect"
 	"strconv"
 
@@ -137,11 +136,11 @@ func (ds *MySQL) Save(data interface{}, params ParamsMap) (interface{}, error) {
 	if ds.debug {
 		fmt.Println("Create SQL: ", SQL)
 	}
+	fmt.Println("SQL Query: ", SQL)
 	result, err := ds.adapter.Exec(SQL)
 	if err != nil {
 		return nil, err
 	}
-	log.Printf("Result: %+v\n", result)
 	var id int64
 	// We have auto increment id that is returned
 	if id, err = result.LastInsertId(); err == nil {
